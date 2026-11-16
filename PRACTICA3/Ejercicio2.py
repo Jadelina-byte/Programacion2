@@ -1,6 +1,4 @@
 import random
-
-
 class Juego:
     def __init__(self, vidas):
         self.vidasIniciales = vidas
@@ -22,7 +20,6 @@ class Juego:
         self.numeroDeVidas -= 1
         print("Vidas restantes:", self.numeroDeVidas)
         return self.numeroDeVidas > 0
-
 
 class JuegoAdivinaNumero(Juego):
     def __init__(self, vidas):
@@ -61,7 +58,6 @@ class JuegoAdivinaNumero(Juego):
             else:
                 print("El numero secreto es menor.")
 
-
 class JuegoAdivinaPar(JuegoAdivinaNumero):
     def validaNumero(self, numero):
         if not 0 <= numero <= 10:
@@ -73,7 +69,6 @@ class JuegoAdivinaPar(JuegoAdivinaNumero):
             return False
 
         return True
-
 
 class JuegoAdivinaImpar(JuegoAdivinaNumero):
     def validaNumero(self, numero):
@@ -103,7 +98,6 @@ class Aplicacion:
 
         print("\n--- JUEGO DE NUMERO IMPAR ---")
         juego3.juega()
-
 
 if __name__ == "__main__":
     Aplicacion.main()

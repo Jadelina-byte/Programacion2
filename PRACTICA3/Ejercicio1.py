@@ -1,6 +1,4 @@
 import random
-
-
 class Juego:
     def __init__(self, vidas):
         self.numeroDeVidas = vidas
@@ -21,7 +19,6 @@ class Juego:
         self.numeroDeVidas -= 1
         print("Vidas restantes:", self.numeroDeVidas)
         return self.numeroDeVidas > 0
-
 
 class JuegoAdivinaNumero(Juego):
     def __init__(self, vidas):
@@ -59,13 +56,11 @@ class JuegoAdivinaNumero(Juego):
             else:
                 print("El numero a adivinar es menor.")
 
-
 class Aplicacion:
     @staticmethod
     def main():
         juego = JuegoAdivinaNumero(3)
         juego.juega()
-
 
 if __name__ == "__main__":
     Aplicacion.main()
